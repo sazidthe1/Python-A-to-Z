@@ -1,11 +1,10 @@
-# Opening the password file in read mode
-password_file = open('secret_password.txt', 'r')
-
-# Reading the secret password from the file
-secret_password = password_file.read()
-
-# Closing the file after reading
-password_file.close()
+try:
+    # Opening the password file in read mode using 'with' statement
+    with open('secret_password.txt', 'r') as password_file:
+        secret_password = password_file.read()
+except FileNotFoundError:
+    print('Error: Password file "secret_password.txt" not found')
+    exit()
 
 # Prompting the user to enter a password
 print('Enter your password:')
