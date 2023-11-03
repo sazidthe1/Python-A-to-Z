@@ -6,5 +6,6 @@ total = food_amount + tip_amount # Getting the total amount
 print('--------------------------------')
 print(f'🍜 Food Amount ${food_amount}')
 print(f'📝 Tip Amount: ${tip_amount}')
+print('\n')
 print(f'💵 Total Amount: ${total}')
 print('--------------------------------')
