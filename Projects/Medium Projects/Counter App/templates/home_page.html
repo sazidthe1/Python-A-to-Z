@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Counter App</title>
+</head>
+<body>
+    <span>{{ count }}</span>
+    <div>
+        <form action="/increment">
+            <button>+</button>
+        </form>
+        <form action="/decrement">
+            <button>-</button>
+        </form>
+    </div>
+</body>
+</html>
