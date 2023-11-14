@@ -89,7 +89,9 @@ Conditions: if, elif, else (always evaluate down to Boolean value, True or False
 Block of code: Lines of codes can be grouped together in blocks
 '''
 
+
 # if Statements: an if statement's clause will execute if the statement's clause is True
+'''
 if name == 'Alice':
     print('Hi, Alice')
 
@@ -106,8 +108,12 @@ if name == 'Alice':
     print('Hi, Alice')
 elif age < 12:
     print('You are not Alice, kiddo')
-elif age > 30:
+elif age > 75:
+    print('You are not Alice, grannie')
+elif age > 300:
     print('Unlike you, Alice is not an undead, importal, vampire.')
+else:
+    print('You are not neither Alice nor a little kid.')
 
 
 name = 'Mary'
@@ -118,5 +124,32 @@ if name == 'Mary':
         print('Access granted.')
 else:
     print('Wrong password! Try again.')
+'''
 
-print()
+
+# while Loop Statements: a while clause will be executed as long as the while statement's condition is True
+count = 0
+while count < 5:
+    print('Hello, World.')
+    count += 1
+
+count = 0
+if count < 5:
+    print('Hello, World.')
+    count = count + 1
+
+
+# break Statements
+while True:
+    print('Please type your name.')
+    name = input()
+    if name == 'your name':
+        break
+print('Thank you!')
+    
+print('Thank you!')
+
+
+# continue Statements
+while True:
+    print('Hello, World.')
