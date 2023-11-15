@@ -128,6 +128,7 @@ else:
 
 
 # while Loop Statements: a while clause will be executed as long as the while statement's condition is True
+'''
 count = 0
 while count < 5:
     print('Hello, World.')
@@ -137,19 +138,53 @@ count = 0
 if count < 5:
     print('Hello, World.')
     count = count + 1
+'''
 
-
-# break Statements
+# break Statements: a break statement helps to break out of a while loop's clause early
+'''
 while True:
     print('Please type your name.')
     name = input()
     if name == 'your name':
         break
 print('Thank you!')
-    
-print('Thank you!')
+'''
 
-
-# continue Statements
-while True:
+# continue Statements: a continue statement helps to jump back to the start of the loop and re-evaluates the loop condition
+''' while True:
     print('Hello, World.')
+'''
+
+# for Loops and the range() Function
+total = 0
+for num in range(101):
+    total += num
+print(total)
+
+print('\n')
+# range() Function
+for i in range(12, 16):
+    print(i)
+print('\n')
+# range() function with three agruments
+for i in range(0, 10, 2):
+    print(i)
+print('\n')
+# range() function with negative numbers
+for i in range(5, 0, -1):
+    print(i)
+
+
+# Importing Modules: a module that contains a related group of functions | a set of modules called the standard library
+'''
+built-in functions: print(), input(), len(), str(), int(), float(), etc.
+
+modules: math, random, datetime, os, requests, json, numpy, pandas, and so on.
+
+To use the functions in a module, we must have import the module using 'import' statement.
+
+Structure looks like: import <name of the module>
+
+To import multiple modules: import <name of the module1>, <name of the module2>, <name of the module3>
+'''
+
