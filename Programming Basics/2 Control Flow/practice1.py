@@ -186,5 +186,7 @@ To use the functions in a module, we must have import the module using 'import' 
 Structure looks like: import <name of the module>
 
 To import multiple modules: import <name of the module1>, <name of the module2>, <name of the module3>
+
+An alternative form of the import statement is from <module name> import * (star). e.g. from random import *
 '''
 
