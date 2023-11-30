@@ -73,7 +73,6 @@ def spam():
 eggs = 42
 spam()
 print(eggs)
-
 '''
 
 # Local and Global Variables with the Same Name
@@ -103,6 +102,7 @@ eggs = 'global'
 spam()
 print(eggs)
 '''
+
 '''
 def spam():
     global eggs
@@ -138,6 +138,7 @@ print(spam(12))
 print(spam(0))
 print(spam(1))
 '''
+
 '''
 def spam(divideBy):
     try:
@@ -163,3 +164,27 @@ try:
 except ZeroDivisionError:
         print('Error: Invalid argument.')
 '''
+
+# Practice Project
+
+def collatz(number):
+    print(number)       # Print the initail number
+
+    while number != 1:      # Continue until the sequence reaches 1
+        if number % 2 == 0:
+            number = number // 2
+    
+        else:
+            number = 3 * number + 1
+        print(number)       # Print the next number in the sequence
+
+while True:
+    try:        # Ask for user input
+        number = int(input('Enter your number: '))
+
+        # Call the function
+        collatz(number)
+        break       # Break out
+
+    except ValueError:
+        print('You must enter an integer. Try again.')
