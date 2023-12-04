@@ -94,3 +94,49 @@ supplies = ['pens', 'staplers', 'flamethrowers', 'binders']
 for i in range(len(supplies)):
     print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
 '''
+
+'''
+# Using the random.choice() with Lists
+import random
+pets = ['Bat', 'Cat', 'Rat']
+print(random.choice(pets))
+
+# Using the random.shuffle Functions with Lists
+import random
+people = ['Alice', 'Bob', 'Carol', 'David']
+random.shuffle(people)
+print(people)
+'''
+
+'''
+# Methods
+# Finding a Value in a List with the index() Method
+greetings = ['hello', 'hi', 'howdy', 'heyas']
+print(greetings.index('hi'))
+print(greetings.index('heyas')) 
+
+# Adding Values to List with the append() Method
+animal = ['bat', 'cat', 'rat']
+animal.append('ocelot')
+print(animal)
+
+# Adding Values to List with the index() Method
+animal = ['bat', 'cat', 'rat']
+animal.insert(2, 'platypus')
+print(animal)
+
+# Removing Values from List with the remove() Method
+animal = ['bat', 'cat', 'rat', 'platypus']
+animal.remove('platypus')
+print(animal)
+
+# Sorting the Values in a List with the sort() Method
+number = [9, 3, -1, -5, 0]
+number.sort()
+print(number)
+
+# Reversing the Values in a List with the reverse() Method
+animal = ['bat', 'cat', 'rat']
+animal.reverse()
+print(animal)
+'''
