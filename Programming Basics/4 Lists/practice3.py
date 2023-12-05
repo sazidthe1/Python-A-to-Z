@@ -140,3 +140,67 @@ animal = ['bat', 'cat', 'rat']
 animal.reverse()
 print(animal)
 '''
+
+'''
+# Sequence Data Types
+name = 'Zophie'
+#print(name[0])
+
+for i in name:
+    print('*** ' + i + ' ***')
+
+# Mutable and Immutable Data Types
+name = 'Zophie is a cat.'
+article = 'the'
+newName = name[:10] + article + name[11:]
+print(newName)
+'''
+
+'''
+# The Tuple Data Type
+eggs = ('hello', 42, 0.5)
+print(eggs[0])
+print(eggs[1:3])
+print(len(eggs))
+
+# Coverting Types with the list() and tuple Functions
+tuple = tuple(['bat', 'cat', 5])
+print(tuple)
+list = list(('bat', 'cat', 5))
+print(list)
+
+# References
+spam = [0, 1, 2, 3, 4, 5]
+cheese = spam
+cheese[0] = 'hello'
+print(spam)
+'''
+
+'''
+# Identity and the id() Function
+print(id('Hi'))
+print(id('Hello'))
+print(id('Howdy'))
+
+eggs = ['bat', 'cat']
+print(id(eggs))
+eggs.append('rat')
+print(id(eggs))
+'''
+'''
+# Passing References
+def eggs(someParameter):
+    someParameter.insert(0, 'Hello')
+
+spam = [1, 2, 3]
+eggs(spam)
+print(spam)
+
+# The copy Module's copy() and deepcopy() Functions
+import copy
+spam = ['A', 'B', 'C', 'D']
+print(id(spam))
+
+cheese = copy.copy(spam)
+id(cheese)
+'''
