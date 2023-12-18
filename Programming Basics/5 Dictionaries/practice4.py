@@ -27,4 +27,18 @@ for k in spam.items():
 spam = {'color': 'red', 'age': 42}
 for l, m in spam.items():
     print('Key: ' + l + ' Value: ' + str(m))
+
+
+# The get() Method
+picnicItems = {'apples': 5, 'cups': 2}
+print('I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.')
+print('I am bringing ' + str(picnicItems.get('eggs', 0)) + ' eggs.')
+
+# The setdefault() Method
+spam = {'name': 'Pooka', 'age': 5}
+if 'color' not in spam:
+    spam['color'] = 'black'
+
+spam = {'name': 'Pooka', 'age': 5}
+print(spam.setdefault('color', 'black'))
 '''
