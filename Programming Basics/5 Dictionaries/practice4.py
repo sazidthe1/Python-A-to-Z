@@ -41,4 +41,26 @@ if 'color' not in spam:
 
 spam = {'name': 'Pooka', 'age': 5}
 print(spam.setdefault('color', 'black'))
+
+
+# Nested Dictionaries and Lists
+allGuests = {'Alice': {'apples': 3, 'pretzels': 12},
+             'Bob': {'sandwiches': 2, 'apples': 2},
+             'Carol': {'cups': 4, 'apple pies': 0},
+             'David': {'cakes': 3, 'apple pies': 1}}
+
+def totalBrought(guests, item):
+    numBrought = 0
+    for k, v in guests.items():
+        numBrought = numBrought + v.get(item, 0)
+    return numBrought
+
+print('Number of things being brought:')
+print(' - Apples         ' + str(totalBrought(allGuests, 'apples')))
+print(' - Cups           ' + str(totalBrought(allGuests, 'cups')))
+print(' - Cakes          ' + str(totalBrought(allGuests, 'cakes')))
+print(' - Sandwiches     ' + str(totalBrought(allGuests, 'sandwiches')))
+print(' - Apple Pies     ' + str(totalBrought(allGuests, 'apple pies')))
 '''
+
+# Practice Questions
