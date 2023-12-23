@@ -61,6 +61,33 @@ print(' - Cups           ' + str(totalBrought(allGuests, 'cups')))
 print(' - Cakes          ' + str(totalBrought(allGuests, 'cakes')))
 print(' - Sandwiches     ' + str(totalBrought(allGuests, 'sandwiches')))
 print(' - Apple Pies     ' + str(totalBrought(allGuests, 'apple pies')))
-'''
+
 
 # Practice Questions
+Q1. What does the code for an empty dictionary look like?
+Ans: {}
+
+Q2. What does a dictionary value with a key 'foo' and a value 42 look like?
+Ans: {'foo': 42}
+
+Q3. What is the main difference between a dictionary and a list?
+Ans: Dictionary uses key-value pairs, while a list stores elements in an ordered sequence.
+
+Q4. What happens if you try to access spam['foo'] if spam is {'bar': 100}?
+Ans: It returns a KeyError as 'foo' isn't a key in the dictionary 'spam'.
+
+Q5. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.keys()?
+Ans: 'cat' in spam checks if 'cat' is a key in the dictionary. 'cat' in spam.keys() also checks if 'cat' is a key in the dictionary but does so explicitly by using the keys() method.
+
+Q6. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.values()?
+Ans: 'cat' in spam checks if 'cat' is a key in the dictionary. 'cat' in spam.values() checks if 'cat' is a value in the dictionary.
+
+Q7. What is a shortcut for the following code?
+Ans: The shortcut is: spam.setdefault('color', 'black')
+
+if 'color' not in spam:
+    spam['color'] = 'black'
+
+Q8. What module and function can be used to “pretty print” dictionary values?
+Ans: The pprint() function of pprint module can be used for pretty print dictionary values.
+'''
