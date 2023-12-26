@@ -122,3 +122,32 @@ shoppingRegex = re.compile(r'\d+\s\w+')
 mo2 = shoppingRegex.findall('7 swans, 6 geese, 5 rings, 4 birds, 3 hens, 2 doves, 1 chicken')
 print(mo2)
 '''
+import re
+# Making Your Own Character Classes
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+vowels = vowelRegex.findall('RoboCop eats baby food. BABY FOOD.')
+print(vowels)
+
+# Making Your Own Character Classes
+vowelRegex = re.compile(r'[^aeiouAEIOU]')
+vowels1 = vowelRegex.findall('RoboCop eats baby food. BABY FOOD.')
+print(vowels1)
+
+# The Caret and Dollar Sign Characters
+beginsWithHello = re.compile(r'^Hello')
+hello = beginsWithHello.search('Hello, world!')
+print(beginsWithHello.search('He said hello.') == None)
+
+endsWithNumber = re.compile(r'\d$')
+endsWithNumber.search('Your number is 42')
+print(endsWithNumber.search('Your number is forty two.') == None)
+
+wholeStringIsNum = re.compile(r'^\d+$')
+wholeStringIsNum.search('1234567890')
+print(wholeStringIsNum.search('12345xyz67890') == None)
+print(wholeStringIsNum.search('12  34567890') == None)
+
+# The Wildcard Character
+atRegex = re.compile(r'.at')
+wildcard = atRegex.findall('The cat in the hat sat on the flat mat.')
+print(wildcard)
