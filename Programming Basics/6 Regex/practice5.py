@@ -121,8 +121,7 @@ print(mo1)
 shoppingRegex = re.compile(r'\d+\s\w+')
 mo2 = shoppingRegex.findall('7 swans, 6 geese, 5 rings, 4 birds, 3 hens, 2 doves, 1 chicken')
 print(mo2)
-'''
-import re
+
 # Making Your Own Character Classes
 vowelRegex = re.compile(r'[aeiouAEIOU]')
 vowels = vowelRegex.findall('RoboCop eats baby food. BABY FOOD.')
@@ -151,3 +150,44 @@ print(wholeStringIsNum.search('12  34567890') == None)
 atRegex = re.compile(r'.at')
 wildcard = atRegex.findall('The cat in the hat sat on the flat mat.')
 print(wildcard)
+
+# Matching Everything with Dot-Star
+nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)')
+mo = nameRegex.search('First Name: Al Last Name: Sweigart')
+print(mo.group(1))
+print(mo.group(2))
+
+nongreedyRegex = re.compile(r'<.*?>')
+mo = nongreedyRegex.search('<To serve man> for dinner.>')
+print(mo.group())
+
+greedyRegex = re.compile(r'<.*>')
+mo = greedyRegex.search('<To serve man> for dinner.>')
+print(mo.group())
+
+# Matching Newlines with the Dot Character
+noNewlineRegex = re.compile('.*')
+mo = noNewlineRegex.search('Serve the public trust.\nProtect the innocent.\nUphold the law.').group()
+print(mo)
+
+newlineRegex = re.compile('.*', re.DOTALL)
+mo1 = newlineRegex.search('Serve the public trust.\nProtect the innocent.\nUphold the law.').group()
+print(mo1)
+
+# Review of Regex Symbols
+- The ? matches zero or one of the preceding group.
+- The * matches zero or more of the preceding group.
+- The + matches one or more of the preceding group.
+- The {n} matches exactly n of the preceding group.
+- The {n,} matches n or more of the preceding group.
+- The {,m} matches 0 to m of the preceding group.
+- The {n,m} matches at least n and at most m of the preceding group.
+- {n,m}? or *? or +? performs a non-greedy match of the preceding group.
+- ^spam means the string must begin with spam.
+- spam$ means the string must end with spam.
+- The . matches any character, except newline characters.
+- \d, \w, and \s match a digit, word, or space character, respectively.
+- \D, \W, and \S match anything except a digit, word, or space character, respectively.
+- [abc] matches any character between the brackets (such as a, b, or c).
+- [^abc] matches any character that isn’t between the brackets.
+'''
