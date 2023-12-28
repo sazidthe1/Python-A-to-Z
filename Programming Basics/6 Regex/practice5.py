@@ -190,4 +190,57 @@ print(mo1)
 - \D, \W, and \S match anything except a digit, word, or space character, respectively.
 - [abc] matches any character between the brackets (such as a, b, or c).
 - [^abc] matches any character that isn’t between the brackets.
+
+# Case-Insensitive Matching
+robocop = re.compile(r'robocop', re.I)
+cop1 = robocop.search('RoboCop is part man, part machine, all cop.').group()
+print(cop1)
+cop2 = robocop.search('ROBOCOP protects the innocent.').group()
+print(cop2)
+cop3 = robocop.search('Al, why does your programming book talk about robocop so much?').group()
+print(cop3)
+
+# Substituting Strings with the sub() Method
+namesRegex = re.compile(r'Agent \w+')
+name = namesRegex.sub('CENSORED', 'Agent Alice gave the secret documents to Agent Bob.')
+print(name)
+
+agent = agentNamesRegex = re.compile(r'Agent (\w)\w*')
+agentName = agentNamesRegex.sub(r'\1****', 'Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.')
+print(agentName)
+
+# Managing Complex Regexes
+phoneRegex = re.compile(r'((\d{3}|\(\d{3}\))?(\s|-|\.)?\d{3}(\s|-|\.)\d{4}(\s*(ext|x|ext.)\s*\d{2,5})?)')
+
+or 
+
+phoneRegex = re.compile(r'''(
+    (\d{3}|\(\d{3}\))?            # area code
+    (\s|-|\.)?                    # separator
+    \d{3}                         # first 3 digits
+    (\s|-|\.)                     # separator
+    \d{4}                         # last 4 digits
+    (\s*(ext|x|ext.)\s*\d{2,5})?  # extension
+    )''', re.VERBOSE)
+
+# Combining re.IGNORECASE, re.DOTALL, and re.VERBOSE
+someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL)
+someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 '''
+
+# Project: Phone Number and Email Address Extractor
+# Step 1: Create a Regex for Phone Numbers
+
+
+# Step 2: Create a Regex for Email Addresses
+
+
+# Step 3: Find All Matches in the Clipboard Text
+
+
+# Step 4: Join the Matches into a String for the Clipboard
+
+
+# Practice Questions
+
+
