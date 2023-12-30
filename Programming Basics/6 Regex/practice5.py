@@ -228,19 +228,74 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL)
 someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 '''
 
-# Project: Phone Number and Email Address Extractor
-# Step 1: Create a Regex for Phone Numbers
-
-
-# Step 2: Create a Regex for Email Addresses
-
-
-# Step 3: Find All Matches in the Clipboard Text
-
-
-# Step 4: Join the Matches into a String for the Clipboard
-
-
+'''
 # Practice Questions
 
+Q1. What is the function that creates Regex objects?
+Ans: 
 
+Q2. Why are raw strings often used when creating Regex objects?
+Ans: 
+
+Q3. What does the search() method return?
+Ans: 
+
+Q4. How do you get the actual strings that match the pattern from a Match object?
+Ans: 
+
+Q5. In the regex created from r'(\d\d\d)-(\d\d\d-\d\d\d\d)', what does group 0 cover? Group 1? Group 2?
+Ans: 
+
+Q6. Parentheses and periods have specific meanings in regular expression syntax. How would you specify that you want a regex to match actual parentheses and period characters?
+Ans: 
+
+Q7. The findall() method returns a list of strings or a list of tuples of strings. What makes it return one or the other?
+Ans: 
+
+Q8. What does the | character signify in regular expressions?
+Ans: 
+
+Q9. What two things does the ? character signify in regular expressions?
+Ans: 
+
+Q10. What is the difference between the + and * characters in regular expressions?
+Ans: 
+
+Q11. What is the difference between {3} and {3,5} in regular expressions?
+Ans:
+
+Q12. What do the \d, \w, and \s shorthand character classes signify in regular expressions?
+Ans:
+
+Q13. What do the \D, \W, and \S shorthand character classes signify in regular expressions?
+Ans:
+
+Q14. What is the difference between .* and .*??
+Ans:
+
+Q15. What is the character class syntax to match all numbers and lowercase letters?
+Ans: 
+
+Q16. How do you make a regular expression case-insensitive?
+Ans: 
+
+Q17. What does the . character normally match? What does it match if re.DOTALL is passed as the second argument to re.compile()?
+Ans: 
+
+Q18. If numRegex = re.compile(r'\d+'), what will numRegex.sub('X', '12 drummers, 11 pipers, five rings, 3 hens') return?
+Ans: 
+
+Q19. What does passing re.VERBOSE as the second argument to re.compile() allow you to do?
+Ans: 
+
+Q20. How would you write a regex that matches a number with commas for every three digits? It must match the following:
+'42'
+'1,234'
+'6,368,745'
+but not the following:
+
+'12,34,567' (which has only two digits between the commas)
+'1234' (which lacks commas)
+
+Ans: 
+'''
