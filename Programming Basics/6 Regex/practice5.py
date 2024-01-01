@@ -232,61 +232,61 @@ someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 # Practice Questions
 
 Q1. What is the function that creates Regex objects?
-Ans: 
+Ans: re.compile()
 
 Q2. Why are raw strings often used when creating Regex objects?
-Ans: 
+Ans: r''
 
 Q3. What does the search() method return?
-Ans: 
+Ans: search() returns the first Match object found.
 
 Q4. How do you get the actual strings that match the pattern from a Match object?
-Ans: 
+Ans: group() method retrieves matched strings from a Match object.
 
 Q5. In the regex created from r'(\d\d\d)-(\d\d\d-\d\d\d\d)', what does group 0 cover? Group 1? Group 2?
-Ans: 
+Ans: Group 0: Entire match. Group 1: First set of parentheses. Group 2: Second set of parentheses.
 
 Q6. Parentheses and periods have specific meanings in regular expression syntax. How would you specify that you want a regex to match actual parentheses and period characters?
-Ans: 
+Ans: To match parentheses or periods, escape them with a backslash: \( for parentheses and \. for periods.
 
 Q7. The findall() method returns a list of strings or a list of tuples of strings. What makes it return one or the other?
-Ans: 
+Ans: findall() returns a list of strings when there are no capture groups, and a list of tuples when there are capture groups.
 
 Q8. What does the | character signify in regular expressions?
-Ans: 
+Ans: | signifies an OR operation in regex.
 
 Q9. What two things does the ? character signify in regular expressions?
-Ans: 
+Ans: ? signifies optional or non-greedy behavior.
 
 Q10. What is the difference between the + and * characters in regular expressions?
-Ans: 
+Ans: + matches one or more occurrences, while * matches zero or more occurrences.
 
 Q11. What is the difference between {3} and {3,5} in regular expressions?
-Ans:
+Ans: {3} matches exactly three occurrences, while {3,5} matches between three to five occurrences.
 
 Q12. What do the \d, \w, and \s shorthand character classes signify in regular expressions?
-Ans:
+Ans: \d matches digits, \w matches word characters, and \s matches whitespace characters.
 
 Q13. What do the \D, \W, and \S shorthand character classes signify in regular expressions?
-Ans:
+Ans: \D matches non-digits, \W matches non-word characters, and \S matches non-whitespace characters.
 
 Q14. What is the difference between .* and .*??
-Ans:
+Ans: .* matches greedily, while .*? matches non-greedily.
 
 Q15. What is the character class syntax to match all numbers and lowercase letters?
-Ans: 
+Ans: [0-9a-z] matches all numbers and lowercase letters.
 
 Q16. How do you make a regular expression case-insensitive?
-Ans: 
+Ans: Use the re.IGNORECASE flag or (?i) at the start of the regex pattern.
 
 Q17. What does the . character normally match? What does it match if re.DOTALL is passed as the second argument to re.compile()?
-Ans: 
+Ans: . matches any character except newline. With re.DOTALL, it matches any character including newline.
 
 Q18. If numRegex = re.compile(r'\d+'), what will numRegex.sub('X', '12 drummers, 11 pipers, five rings, 3 hens') return?
-Ans: 
+Ans: X drummers, X pipers, five rings, X hens.
 
 Q19. What does passing re.VERBOSE as the second argument to re.compile() allow you to do?
-Ans: 
+Ans: Allows comments and whitespace within the pattern for readability.
 
 Q20. How would you write a regex that matches a number with commas for every three digits? It must match the following:
 '42'
@@ -297,5 +297,5 @@ but not the following:
 '12,34,567' (which has only two digits between the commas)
 '1234' (which lacks commas)
 
-Ans: 
+Ans: r'^\d{1,3}(,\d{3})*$'
 '''
