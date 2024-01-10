@@ -78,4 +78,27 @@ def addToTen(numbers):
 
 response = pyip.inputCustom(addToTen)
 print(response)
+
+
+# Practice Questions
+Q1. Does PyInputPlus come with the Python Standard Library?
+Ans: No, PyInputPlus is not part of the Python Standard Library, it's a third-party library.
+
+Q2. Why is PyInputPlus commonly imported with import pyinputplus as pyip?
+Ans: PyInputPlus is commonly imported as pyip to provide a shorter alias for convenience and brevity in code.
+
+Q3. What is the difference between inputInt() and inputFloat()?
+Ans: inputInt() is used to specifically accept integer input, while inputFloat() is used to accept floating-point numbers.
+
+Q4. How can you ensure that the user enters a whole number between 0 and 99 using PyInputPlus?
+Ans: To ensure a whole number between 0 and 99, you can use pyip.inputInt(min=0, max=99).
+
+Q5. What is passed to the allowRegexes and blockRegexes keyword arguments?
+Ans: The allowRegexes argument accepts a list of regular expressions that are allowed as input, while blockRegexes accepts a list of regular expressions to disallow as input.
+
+Q6. What does inputStr(limit=3) do if blank input is entered three times?
+Ans: inputStr(limit=3) raises a TimeoutException after three blank inputs.
+
+Q7. What does inputStr(limit=3, default='hello') do if blank input is entered three times?
+Ans: It returns the default value 'hello' after three blank inputs instead of raising a TimeoutException.
 '''
