@@ -27,4 +27,3 @@ while True:
             print('You lose.', computer_play, 'beats', user_play)
     else:
         print('Not a valid play option. Try agin!')
-        
