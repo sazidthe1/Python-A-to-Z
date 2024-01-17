@@ -80,36 +80,35 @@ print(content)
 # Practice Questions
 
 Q1. What is a relative path relative to?
-Ans: 
+Ans: Relative path is relative to the current working directory.
 
 Q2. What does an absolute path start with?
-Ans: 
+Ans: Absolute path starts with the root directory.
 
 Q3. What does Path('C:/Users') / 'Al' evaluate to on Windows?
-Ans: 
+Ans: Path('C:/Users') / 'Al' evaluates to 'C:/Users/Al'.
 
 Q4. What does 'C:/Users' / 'Al' evaluate to on Windows?
-Ans: 
+Ans: 'C:/Users' / 'Al' raises a TypeError.
 
 Q5. What do the os.getcwd() and os.chdir() functions do?
-Ans: 
+Ans: os.getcwd() gets the current working directory & os.chdir() changes the current working directory.
 
 Q6. What are the . and .. folders?
-Ans: 
+Ans: '.' refers to the current directory, '..' refers to the parent directory.
 
-Q7. In C:\bacon\eggs\spam.txt, which part is the dir name, and which part is the base name?
-Ans: 
+Q7. In C:\meals\eggs\spam.txt, which part is the dir name, and which part is the base name?
+Ans: 'C:\meals\eggs' is the dir name, 'spam.txt' is the base name.
 
 Q8. What are the three “mode” arguments that can be passed to the open() function?
-Ans: 
+Ans: 'r' for read, 'w' for write, 'a' for append.
 
 Q9. What happens if an existing file is opened in write mode?
-Ans: 
+Ans: Opening in write mode truncates the file, erasing its contents.
 
 Q10. What is the difference between the read() and readlines() methods?
-Ans: 
+Ans: read() reads the entire file as a single string, readlines() reads lines into a list.
 
 Q11. What data structure does a shelf value resemble?
-Ans: 
-
+Ans: A shelf value resembles a dictionary.
 '''
